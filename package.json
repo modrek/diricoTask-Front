@@ -1,0 +1,45 @@
+{
+  "name": "modrek",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@material-ui/core": "4.10.2",
+    "@material-ui/icons": "4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/styles": "4.10.0",
+    "@material-ui/system": "4.9.14",
+    "@material-ui/utils": "4.10.2",
+    "@types/react-redux": "^7.1.9",
+    "@types/redux-devtools-extension": "^2.13.2",
+    "@types/redux-logger": "^3.0.8",
+    "@types/redux-thunk": "^2.1.0",
+    "axios": "^0.19.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.2.0",
+    "react-router": "5.2.0",
+    "react-scripts": "3.4.1",
+    "react-spring": "^8.0.27",
+    "redux": "4.0.5",
+    "redux-observable": "1.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
