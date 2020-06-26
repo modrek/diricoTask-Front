@@ -1,7 +1,7 @@
-import React, { Children } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
 import Assets from '../assets/index';
+
 const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
   title: {

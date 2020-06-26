@@ -6,6 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Face";
 import { Breadcrumbs, Link } from "@material-ui/core";
+import { NavLink } from 'react-router-dom';
+
 
 const drawerWidth = 240;
 
@@ -37,17 +39,19 @@ export const TopMenu = () => {
           <MenuIcon />
         </IconButton>
         <Breadcrumbs aria-label="breadcrumb">
-          <Link color="inherit" href="/" onClick={() => console.log(12)}>
-            Material-UI
-          </Link>
-          <Link
+        <NavLink  className="nav-link dropdownlink" to="/" >   dirico.io </NavLink>
+        <NavLink  className="nav-link dropdownlink" to="/Folder" >   Folder </NavLink>
+          {/* <Link color="inherit" href="/" onClick={() => console.log(12)}>
+            Dirico.io
+          </Link> */}
+          {/* <Link
             color="inherit"
             href="/getting-started/installation/"
             onClick={() => console.log("22")}
           >
             Core
-          </Link>
-          <Typography color="textPrimary">Breadcrumb</Typography>
+          </Link> */}
+          <Typography color="textPrimary">Current</Typography>
         </Breadcrumbs>
       </Toolbar>
     </AppBar>
