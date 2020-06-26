@@ -1,0 +1,6 @@
+.MuiBreadcrumbs-ol, .MuiBreadcrumbs-ol a {
+    color: white;
+}
+.MuiTypography-colorTextPrimary {
+    color: rgb(255, 217, 26) !important;
+}

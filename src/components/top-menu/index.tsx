@@ -7,6 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Face";
 import { Breadcrumbs, Link } from "@material-ui/core";
 import { NavLink } from 'react-router-dom';
+import "./style.css";
 
 
 const drawerWidth = 240;

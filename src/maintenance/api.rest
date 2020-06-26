@@ -1,6 +1,6 @@
 
 # @name getFolderChildren
-Post https://diricodemo1.azurewebsites.net/api/v0.01/Asset/GetFolders HTTP/1.1
+Post https://diricodemo1.azurewebsites.net/api/v1/Asset/GetFolders HTTP/1.1
 content-type: application/json
 
 {

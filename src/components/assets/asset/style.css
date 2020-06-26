@@ -1,0 +1,25 @@
+.MuiCardMedia-img {
+    object-fit: contain !important;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: 300px;
+}
+.MuiCard-root {
+    overflow: hidden;
+    height: 100%;
+}
+.MuiCard-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.MuiCardActionArea-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* .MuiCardContent-root {
+    display: none;
+} */

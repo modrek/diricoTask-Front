@@ -5,8 +5,9 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Modal from "../../Modal/index";
+import Modal from "../../modal/index";
 import Button from "@material-ui/core/Button";
+import "./style.css";
 
 
 type CardProps = {
@@ -17,37 +18,44 @@ type CardProps = {
 
 }
 
-export const Asset = ({ currentAsset, onAssetclicked, onDetailclicked,onMetaDataclicked }: CardProps) => {
-  let cardDecription = "to see folder content just click on it!";
-  let assetAddress = "/images/folder.png";
+export const Asset = ({ currentAsset, onAssetclicked, onDetailclicked, onMetaDataclicked }: CardProps) => {
+  let cardDecription = "";
+  let thumbnail = "/images/folder.png";
+  let assetAddress = "/images/folder.png"; // for folder
   let assetTitle = currentAsset.assetName;
   let detailbutton = null;
 
 
   if (currentAsset.assetType !== 0) {
+    if (currentAsset.assetType == 1)  // if image
+      thumbnail = currentAsset.assetPath;
+    else
+      thumbnail = "/images/video.png";  // for video
+
+
     assetAddress = currentAsset.assetPath;
     assetTitle = "";
-    cardDecription = "to see asset just click on it!";
 
-    detailbutton = <>    
-    <Button variant="contained" color="secondary" onClick={() => onMetaDataclicked(currentAsset.assetID)}>
-    see Meta data
+
+    detailbutton = <>
+      <Button variant="contained" color="secondary" onClick={() => onMetaDataclicked(currentAsset.assetID)}>
+        see Meta data
             </Button>
-    <Modal caption="Show asset" alt={currentAsset.assetName} path={assetAddress}/>
-      </> 
-      
-    if   (currentAsset.isOrginalAsset) 
-    detailbutton = <>    
-    
-    <Button variant="contained" color="secondary" onClick={() => onMetaDataclicked(currentAsset.assetID)}>
-    see Meta data
+      <Modal caption="Show asset" alt={currentAsset.assetName} path={assetAddress} assetType={currentAsset.assetType} />
+    </>
+
+    if (currentAsset.isOrginalAsset)
+      detailbutton = <>
+
+        <Button variant="contained" color="secondary" onClick={() => onMetaDataclicked(currentAsset.assetID)}>
+          see Meta data
             </Button>
-    <Modal caption="Show asset" alt={currentAsset.assetName} path={assetAddress}/>
-    <Button variant="contained" color="secondary" onClick={() => onDetailclicked(currentAsset.assetID)}>
-    Show Detail
+        <Modal caption="Show asset" alt={currentAsset.assetName} path={assetAddress} assetType={currentAsset.assetType} />
+        <Button variant="contained" color="secondary" onClick={() => onDetailclicked(currentAsset.assetID)}>
+          Show Detail
             </Button>
-    
-    </> 
+
+      </>
   }
 
 
@@ -60,19 +68,18 @@ export const Asset = ({ currentAsset, onAssetclicked, onDetailclicked,onMetaData
           <CardMedia
             component="img"
             alt={currentAsset.assetName}
-            height="290"
-            image={assetAddress}
+
+            image={thumbnail}
             title={assetTitle}
             onClick={() => onAssetclicked(currentAsset.assetID, currentAsset.assetType)}
-
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {assetTitle}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            {/* <Typography variant="body2" color="textSecondary" component="p">
               {cardDecription}
-            </Typography>
+            </Typography> */}
           </CardContent>
         </CardActionArea>
         <CardActions>

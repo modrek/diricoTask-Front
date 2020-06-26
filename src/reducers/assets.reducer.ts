@@ -34,7 +34,7 @@ export const assetReducer = (
         },
       };
     case ActionTypes.FETCH_ASSETS_SUCCEED:
-      debugger;
+      
       return {
         ...state,
         ...(action.payload as any).assets,
