@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function AnimatedModal({ caption, alt, path,assetType }: { caption: string, alt: string, path: string ,assetType:number}) {
+export default function AnimatedModal({ caption, alt, path, assetType }: { caption: string, alt: string, path: string, assetType: number }) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
 

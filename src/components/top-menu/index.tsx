@@ -40,8 +40,8 @@ export const TopMenu = () => {
           <MenuIcon />
         </IconButton>
         <Breadcrumbs aria-label="breadcrumb">
-        <NavLink  className="nav-link dropdownlink" to="/" >   dirico.io </NavLink>
-        <NavLink  className="nav-link dropdownlink" to="/Folder" >   Folder </NavLink>
+          <NavLink className="nav-link dropdownlink" to="/" >   dirico.io </NavLink>
+          <NavLink className="nav-link dropdownlink" to="/Folder" >   Folder </NavLink>
           {/* <Link color="inherit" href="/" onClick={() => console.log(12)}>
             Dirico.io
           </Link> */}

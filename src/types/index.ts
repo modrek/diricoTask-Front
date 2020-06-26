@@ -5,7 +5,7 @@ export interface IAsset {
   AssetName: string;
   AssetType: number;
   AssetPath: string;
-  isOrginalAsset:boolean;
+  isOrginalAsset: boolean;
 }
 
 export interface IFolder {
@@ -19,8 +19,8 @@ export interface IMetadata {
   isSucceed?: boolean;
   error?: string | null;
 }
-export const AssetTypes ={
-  Folder:0,
-  Image:1,
-  Video:2
+export const AssetTypes = {
+  Folder: 0,
+  Image: 1,
+  Video: 2
 };

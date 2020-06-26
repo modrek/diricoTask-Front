@@ -40,9 +40,6 @@ const Assets = (props: any) => {
     getFolderContent("", false);
   }, []);
 
-  // const [selectedValue, setSelectedValue] = React.useState('a');
-  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setSelectedValue(event.target.value);
 
   const onFileSelectorHandler = (event: any) => {
     setSelectedFile(event.target.files[0]);
@@ -145,9 +142,7 @@ const Assets = (props: any) => {
     else
       setSelectedFileType(AssetTypes.Video);
 
-
-
-    //setValue((event.target as HTMLInputElement).value);
+    
   };
 
 
@@ -158,14 +153,11 @@ const Assets = (props: any) => {
           Home
   </Link>
       </Typography>
-      <FormControl component="fieldset">
-
-        {/* <FormLabel component="legend">Asset Type</FormLabel> */}
+      <FormControl component="fieldset">        
         <RadioGroup
           aria-label="gender"
           name="gender1"
-          style={{ flexDirection: "row" }}
-          //value={selectedFileType}
+          style={{ flexDirection: "row" }}          
           onChange={onHandleRadioChange}
         >
           <FormControlLabel value="Image" control={<Radio />} label="Image" />
@@ -203,7 +195,6 @@ const Assets = (props: any) => {
       <Grid container style={{ padding: 24 }}>
         {assets.map((currentasset, index) => (
           <Grid key={index} item xs={12} sm={6} lg={4} xl={3} style={{ padding: 10 }} >
-
             <Asset currentAsset={currentasset}
               onAssetclicked={onAssetClickHandler}
               onDetailclicked={onDetailClickHandler}

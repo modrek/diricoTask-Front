@@ -19,16 +19,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 // export const MainContent:React.FC<children> = ({ children }) => {
-  export const MainContent:React.FC = () => {
+export const MainContent: React.FC = () => {
   const classes = useStyles();
   return (
     <main className={classes.fullWidth}>
       <div className={classes.toolbar} />
-      
+
       <div className={classes.title}>
         {/* <Typography variant="h6">Title</Typography> */}
         <Assets></Assets>
-      </div>      
+      </div>
       <div className={classes.content}></div>
     </main>
   );

@@ -11,7 +11,7 @@ import { TopMenu } from "./components/top-menu";
 import { MainContent } from "./components/main";
 import * as assetActions from "./actions/asset.action";
 import { rootReducer } from "./reducers";
-import { Route, Switch,  BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,18 +38,18 @@ export default function App() {
   }, []);
   return (
     <BrowserRouter>
-    <Provider store={store}>
-      <div className={classes.root}>
-        <TopMenu />
-        <SideBar />
-        
+      <Provider store={store}>
+        <div className={classes.root}>
+          <TopMenu />
+          <SideBar />
+
           <Switch>
             <Route path="/" component={MainContent} />
           </Switch>
-        
-        <Footer />
-      </div>
-    </Provider>
-  </BrowserRouter>
+
+          <Footer />
+        </div>
+      </Provider>
+    </BrowserRouter>
   );
 }

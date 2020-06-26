@@ -18,22 +18,19 @@ export class API {
     });
   }
 
-  async deleteAsset({uuid}:{uuid:string|null}){
-      return  (await this.apiAxios.delete('/DeleteAsset')).data
+  async deleteAsset({ uuid }: { uuid: string | null }) {
+    return (await this.apiAxios.delete('/DeleteAsset')).data
   }
-  async deleteAllAsset(){
-      return (await this.apiAxios.delete('/DeleteAllAssets')).data
+  async deleteAllAsset() {
+    return (await this.apiAxios.delete('/DeleteAllAssets')).data
   }
-  // async getFolders({uuid}:{uuid:string|null}){
-  //     return (await this.apiAxios.get(`/GetFolders`)).data
-  // }
-  async getFolderContents({uuid}:{uuid:string|null}){
-      return  (await this.apiAxios.get(`/GetFolderContents`)).data
+  async getFolderContents({ uuid }: { uuid: string | null }) {
+    return (await this.apiAxios.get(`/GetFolderContents`)).data
   }
-  async getAssetMetaData({uuid}:{uuid:string|null}){
-      return  (await this.apiAxios.get(`/GetAssetMetadata`)).data
+  async getAssetMetaData({ uuid }: { uuid: string | null }) {
+    return (await this.apiAxios.get(`/GetAssetMetadata`)).data
   }
-  async uploadAsset({uuid}:{uuid:string|null}){
-      return  (await this.apiAxios.post(`/UploadAsync`,)).data
+  async uploadAsset({ uuid }: { uuid: string | null }) {
+    return (await this.apiAxios.post(`/UploadAsync`,)).data
   }
 }
